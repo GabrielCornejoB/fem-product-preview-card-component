@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: hsl(30deg, 38%, 92%);
+}
+body .card-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card-container .card {
+  width: 800px;
+  height: 600px;
+  background: hsl(0deg, 0%, 100%);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+body .card-container .card .card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+body .card-container .card .card-content h2 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+body .card-container .card .card-content h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+  margin-bottom: 40px;
+  color: hsl(212deg, 21%, 14%);
+}
+body .card-container .card .card-content p {
+  font-size: 1.25rem;
+}
+body .card-container .card .card-content p.description {
+  margin-bottom: 30px;
+}
+body .card-container .card .card-content .prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 45px;
+}
+body .card-container .card .card-content .prices p.new-price {
+  font-family: "Fraunces", serif;
+  color: hsl(158deg, 36%, 37%);
+  font-size: 2.75rem;
+}
+body .card-container .card .card-content .prices p.old-price {
+  padding-left: 20px;
+  text-decoration: line-through;
+}
+body .card-container .card .card-content button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: hsl(158deg, 36%, 37%);
+  border: none;
+  height: 65px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+body .card-container .card .card-content button img {
+  height: 1.25rem;
+}
+body .card-container .card .card-content button p {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  padding-left: 15px;
+}
+body .card-container .card .card-content button:hover {
+  cursor: pointer;
+  background: hsl(158deg, 36%, 15%);
+}
+
+/*# sourceMappingURL=styles.css.map */

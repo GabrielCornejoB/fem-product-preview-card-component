@@ -1,0 +1,94 @@
+$dark-cyan: hsl(158, 36%, 37%)
+$darker-cyan: hsl(158, 36%, 15%)
+$cream: hsl(30, 38%, 92%)
+$very-dark-blue: hsl(212, 21%, 14%)
+$dark-grayish-blue: hsl(228, 12%, 48%)
+$white: hsl(0, 0%, 100%)
+
+*
+    margin: 0
+    padding: 0
+    font-family: 'Montserrat', sans-serif
+    color: $dark-grayish-blue
+html
+    font-size: 100%
+body
+    position: absolute
+    top: 0
+    bottom: 0
+    background: $cream
+    .card-container
+        width: 100vw
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+        .card
+            width: 800px
+            height: 600px
+            background: $white
+            display: grid
+            grid-template-columns: 50% 50%
+            border-radius: 15px
+            overflow: hidden
+            .card-content
+                display: flex
+                flex-direction: column
+                padding: 40px
+                h2
+                    font-weight: normal
+                    font-size: 1rem
+                    margin-bottom: 25px
+                    letter-spacing: 1px
+                h1
+                    font-family: 'Fraunces', serif
+                    font-size: 2.75rem
+                    line-height: 2.75rem
+                    margin-bottom: 40px
+                    color: $very-dark-blue
+                p
+                    font-size: 1.25rem
+                p.description
+                    margin-bottom: 30px
+                .prices
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    margin-bottom: 45px
+                    p.new-price
+                        font-family: 'Fraunces', serif
+                        color: $dark-cyan
+                        font-size: 2.75rem
+                    p.old-price
+                        padding-left: 20px
+                        text-decoration: line-through
+                button
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    justify-content: center
+                    background: $dark-cyan
+                    border: none
+                    height: 65px
+                    border-radius: 10px
+                    transition: 0.3s
+                    img
+                        height: 1.25rem
+                    p
+                        color: $white
+                        font-weight: bold
+                        padding-left: 15px
+                    &:hover
+                        cursor: pointer
+                        background: $darker-cyan
+            
+            
+                
+                        
+
+                        
+                
+                    
+
+            
+
