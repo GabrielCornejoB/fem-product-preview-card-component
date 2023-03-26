@@ -4,6 +4,8 @@ $cream: hsl(30, 38%, 92%)
 $very-dark-blue: hsl(212, 21%, 14%)
 $dark-grayish-blue: hsl(228, 12%, 48%)
 $white: hsl(0, 0%, 100%)
+$card-width: 700px
+$card-height: 525px
 
 *
     margin: 0
@@ -11,7 +13,8 @@ $white: hsl(0, 0%, 100%)
     font-family: 'Montserrat', sans-serif
     color: $dark-grayish-blue
 html
-    font-size: 100%
+    font-size: 12px
+
 body
     position: absolute
     top: 0
@@ -24,37 +27,43 @@ body
         justify-content: center
         align-items: center
         .card
-            width: 800px
-            height: 600px
+            width: $card-width
+            height: $card-height
             background: $white
-            display: grid
-            grid-template-columns: 50% 50%
+            display: flex
+            flex-direction: row
             border-radius: 15px
+            box-sizing: border-box
             overflow: hidden
+            picture
+                width: 50%
+                img
+                    width: $card-width / 2
             .card-content
                 display: flex
+                width: 50%
                 flex-direction: column
+                justify-content: space-between
                 padding: 40px
                 h2
                     font-weight: normal
                     font-size: 1rem
-                    margin-bottom: 25px
                     letter-spacing: 1px
                 h1
                     font-family: 'Fraunces', serif
                     font-size: 2.75rem
                     line-height: 2.75rem
-                    margin-bottom: 40px
                     color: $very-dark-blue
+                    width: 90%
                 p
                     font-size: 1.25rem
                 p.description
-                    margin-bottom: 30px
+                    line-height: 25px
+                    width: 90%
                 .prices
                     display: flex
                     flex-direction: row
                     align-items: center
-                    margin-bottom: 45px
                     p.new-price
                         font-family: 'Fraunces', serif
                         color: $dark-cyan
@@ -69,7 +78,6 @@ body
                     justify-content: center
                     background: $dark-cyan
                     border: none
-                    height: 65px
                     border-radius: 10px
                     transition: 0.3s
                     img
@@ -77,18 +85,40 @@ body
                     p
                         color: $white
                         font-weight: bold
-                        padding-left: 15px
+                        padding: 13.5px 0 13.5px 15px
                     &:hover
                         cursor: pointer
                         background: $darker-cyan
             
+
+$mobile-card-height: 600px
+$mobile-card-width: 350px
+$mobile-image-height: 235px
+@media (max-width: 450px)
+    body
+        .card-container
+            .card
+                width: $mobile-card-width
+                height: $mobile-card-height
+                display: flex
+                flex-direction: column
+                picture
+                    height: $mobile-image-height
+                    width: 100%
+                    img
+                        height: $mobile-image-height
+                        width: $mobile-card-width
+                .card-content
+                    height: $mobile-card-height - $mobile-image-height
+                    width: 100%
+                    padding: 25px 25px
+                    box-sizing: border-box
+                    h1
+                        width: 100%
+                    p.description 
+                        width: 100%
+                    button
+                        p
+                            padding: 15px 0 15px 15px
+
             
-                
-                        
-
-                        
-                
-                    
-
-            
-
